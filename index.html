@@ -11,6 +11,8 @@
 
 <body>
 
+    <button id="temaBtn">🌙</button>
+
     <div class="container">
 
         <h1>💱 Conversor de Moedas</h1>
@@ -37,10 +39,11 @@
 
                 <select id="origem">
 
-                    <option value="BRL">Real (BRL)</option>
-                    <option value="USD">Dólar (USD)</option>
-                    <option value="EUR">Euro (EUR)</option>
-                    <option value="GBP">Libra (GBP)</option>
+                    <option value="BRL">🇧🇷 Real</option>
+                    <option value="USD">🇺🇸 Dólar</option>
+                    <option value="EUR">🇪🇺 Euro</option>
+                    <option value="GBP">🇬🇧 Libra</option>
+                    <option value="JPY">🇯🇵 Iene</option>
 
                 </select>
 
@@ -52,23 +55,36 @@
 
                 <select id="destino">
 
-                    <option value="USD">Dólar (USD)</option>
-                    <option value="BRL">Real (BRL)</option>
-                    <option value="EUR">Euro (EUR)</option>
-                    <option value="GBP">Libra (GBP)</option>
+                    <option value="USD">🇺🇸 Dólar</option>
+                    <option value="BRL">🇧🇷 Real</option>
+                    <option value="EUR">🇪🇺 Euro</option>
+                    <option value="GBP">🇬🇧 Libra</option>
+                    <option value="JPY">🇯🇵 Iene</option>
 
                 </select>
 
             </div>
 
+            <button
+                type="button"
+                id="inverterBtn">
+
+                🔄 Inverter Moedas
+
+            </button>
+
             <button type="submit">
+
                 Converter
+
             </button>
 
         </form>
 
         <div id="resultado">
+
             Informe os dados para converter.
+
         </div>
 
     </div>
