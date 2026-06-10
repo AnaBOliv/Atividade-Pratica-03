@@ -6,7 +6,10 @@
 }
 
 body{
+
     background:#F8F9ED;
+    color:#3F5730;
+
     min-height:100vh;
 
     display:flex;
@@ -14,12 +17,20 @@ body{
     align-items:center;
 
     padding:20px;
+
+    transition:.3s;
+}
+
+body.dark{
+
+    background:#2D3D24;
+    color:white;
 }
 
 .container{
 
     width:100%;
-    max-width:500px;
+    max-width:550px;
 
     background:white;
 
@@ -30,6 +41,11 @@ body{
     box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
+body.dark .container{
+
+    background:#425632;
+}
+
 h1{
 
     text-align:center;
@@ -37,6 +53,11 @@ h1{
     color:#7FA85A;
 
     margin-bottom:25px;
+}
+
+body.dark h1{
+
+    color:#CBE7B4;
 }
 
 .campo{
@@ -51,8 +72,6 @@ label{
 
     margin-bottom:5px;
 
-    color:#4f6639;
-
     font-weight:600;
 }
 
@@ -61,64 +80,86 @@ select{
 
     padding:12px;
 
-    border:2px solid #c9d8b8;
+    border:2px solid #BFD7A6;
 
     border-radius:8px;
 
     font-size:16px;
 }
 
-input:focus,
-select:focus{
+body.dark input,
+body.dark select{
 
-    outline:none;
-
-    border-color:#7FA85A;
+    background:#5B7445;
+    color:white;
+    border:none;
 }
 
 button{
 
     width:100%;
 
+    margin-top:10px;
+
     padding:12px;
-
-    background:#7FA85A;
-
-    color:white;
 
     border:none;
 
     border-radius:8px;
 
+    cursor:pointer;
+
     font-size:16px;
 
-    cursor:pointer;
+    font-weight:bold;
+
+    background:#7FA85A;
+
+    color:white;
 
     transition:.3s;
 }
 
 button:hover{
 
-    background:#688c48;
+    opacity:.9;
+}
+
+#temaBtn{
+
+    position:fixed;
+
+    top:15px;
+    left:15px;
+
+    width:55px;
+
+    z-index:100;
+
+    border-radius:50%;
 }
 
 #resultado{
 
     margin-top:20px;
 
-    padding:15px;
+    padding:20px;
 
-    background:#eef4e7;
+    border-radius:10px;
+
+    background:#EEF5E6;
 
     border-left:5px solid #7FA85A;
 
-    border-radius:8px;
-
     text-align:center;
 
-    font-size:18px;
+    line-height:1.8;
+}
 
-    color:#425632;
+body.dark #resultado{
+
+    background:#5B7445;
+    color:white;
 }
 
 @media(max-width:600px){
@@ -126,5 +167,10 @@ button:hover{
     .container{
 
         padding:20px;
+    }
+
+    h1{
+
+        font-size:1.6rem;
     }
 }
